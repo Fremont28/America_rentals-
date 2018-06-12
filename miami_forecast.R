@@ -60,7 +60,7 @@ mean(miami$avg_price) #1823
 fit1=HoltWinters(mia_ts,beta=FALSE,gamma=FALSE)
 forecast(fit1,3)#algo errors?
 
-# dencer subset 
+# denver subset 
 denver=subset(avg_prices1,RegionName=="Denver")
 den_ts=xts(denver$avg_price,order.by=as.POSIXct(denver$year),format="Y%m%d")
 fit2=HoltWinters(den_ts,beta=FALSE,gamma=FALSE)
